@@ -1,0 +1,27 @@
+body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(to right, #ff9a9e, #fad0c4);
+      font-family: 'Poppins', sans-serif;
+    }
+
+    #clickedButton {
+      padding: 10px 24px;
+      font-size: 15px;
+      background: linear-gradient(135deg, #ff6ec4, #7873f5);
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #clickedButton:hover {
+      transform: scale(0.8);
+      border: 2px solid black;
+      background: linear-gradient(135deg, #f7797d, #FBD786);
+    }

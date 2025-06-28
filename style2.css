@@ -1,0 +1,103 @@
+ body {
+      margin: 0;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(to right, #ffe4e1, #ffc0cb);
+      font-family: 'Poppins', sans-serif;
+      position: relative;
+    }
+
+    #text {
+      font-size: 40px;
+      color: #ff1493;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+      z-index: 2;
+      margin-bottom: 10px;
+    }
+
+    #autoMessage {
+      font-size: 24px;
+      color: #d63384;
+      margin-top: 10px;
+      z-index: 2;
+      height: 30px;
+    }
+
+    .photo {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      border: 5px solid white;
+      object-fit: cover;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      margin-top: 20px;
+      z-index: 2;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .photo:hover {
+      transform: scale(1.05);
+    }
+
+    .back-button {
+      margin-top: 50px;
+      padding: 6px 18px;
+      font-size: 14px;
+      background: linear-gradient(135deg, #ff6ec4, #7873f5);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      z-index: 2;
+      transition: all 0.3s ease;
+    }
+
+    .back-button:hover {
+      background: linear-gradient(135deg, #ff69b4, #8e2de2);
+      transform: scale(1.05);
+    }
+
+    .flower {
+      position: absolute;
+      top: -50px;
+      font-size: 30px;
+      animation: fall linear infinite;
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    .confetti {
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      background-color: red;
+      opacity: 0.9;
+      border-radius: 50%;
+      animation: explode 1s ease-out forwards;
+    }
+
+    @keyframes explode {
+      0% { transform: translate(0, 0) scale(1); opacity: 1; }
+      100% { transform: translate(var(--x), var(--y)) scale(0.5); opacity: 0; }
+    }
+
+    .bomb {
+      position: absolute;
+      bottom: 20px;
+      font-size: 28px;
+      z-index: 1;
+    }
+
+    .bomb.left { left: 30px; }
+    .bomb.right { right: 30px; }
