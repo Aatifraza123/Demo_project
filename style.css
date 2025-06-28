@@ -9,8 +9,8 @@ body {
     }
 
     #clickedButton {
-      padding: 10px 24px;
-      font-size: 15px;
+      padding: 15px 35px;
+      font-size: 25px;
       background: linear-gradient(135deg, #ff6ec4, #7873f5);
       color: white;
       border: none;
